@@ -1,0 +1,37 @@
+{
+    "dependencies": {
+        "@babel/core": "^7.19.0",
+        "@babel/preset-env": "^7.19.0",
+        "babel-loader": "^8.2.5",
+        "css-loader": "^6.7.1",
+        "hot-module-replacement": "^3.0.4",
+        "postcss": "^8.4.16",
+        "postcss-loader": "^7.0.1",
+        "postcss-preset-env": "^7.8.0",
+        "prettier": "^2.7.1",
+        "style-loader": "^3.3.1",
+        "tailwindcss": "^3.1.8",
+        "webpack": "^5.74.0",
+        "webpack-cli": "^4.10.0",
+        "webpack-dev-server": "^4.10.1"
+    },
+    "name": "pc-repairs",
+    "version": "1.0.0",
+    "description": "PCRepairs Information System",
+    "main": "./index.html",
+    "devDependencies": {},
+    "scripts": {
+        "start": "webpack serve --mode=development --open",
+        "build": "export NODE_ENV=production && webpack"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TrippyUnicorn420/PCRepairs-InfoSys.git"
+    },
+    "author": "Siku Mahayi, Sabelwe Mabuya, Cathy Hlungwane, Ubuhle de Bees",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/TrippyUnicorn420/PCRepairs-InfoSys/issues"
+    },
+    "homepage": "https://github.com/TrippyUnicorn420/PCRepairs-InfoSys#readme"
+}
