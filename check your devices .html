@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHECK YOUR DEVICES</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+       
+       * {
+  box-sizing: border-box;
+}
+.header {
+  background-color: #000d34;
+  text-align: right;
+  color:white;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  border-radius: 30px;   
+}
+.foot{
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 54em;
+}
+.nav {
+  overflow: hidden;
+  background-color: lightgrey;
+  font-family: Arial, sans-serif;
+  border-radius: 30px;   
+}
+.nav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.nav a:hover {
+  background-color: lightblue;
+  color: white;
+}
+.icons{
+  float: right;
+}
+
+.middle{
+  position: absolute;
+  font-family: Arial, Helvetica sans-serif;
+  top: 30%;
+  width: 100%;
+  float:left;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+@media screen and (max-width: 400px) {
+  .nav a {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .middle, .foot, .nav{   
+    width: 100%;
+    padding:0;
+  }
+}
+
+  </style>
+</head> <div class="header"> 
+    <header>
+     <h3>PC repairs</h3>
+    </header></div>
+   <div class= "nav"> <nav><a href="url">Home</a>  <a href="url">Services</a> <a href="url"> About us</a> <a href="url">FAQs</a>  
+   <div class="icons"><a href="#"> <i class="fa fa-fw fa-envelope"></i></a> <a href="#"><i class='fa fa-phone'></i></a>
+    <a href ="#"><i class='fa fa-user-o'></i></a><a href="#"><i class='fa fa-search'></i></a>
+  </div></nav></div>
+    <body>
+    
+  <div class = "middle">
+          <br><div style =" text-align: center;"><p><h1>CHECK YOUR DEVICE</h1></p><br></div>
+          <div style = "text-align: center;">
+           
+           <table>
+            <tr>
+              <th>Device</th>
+              <th>Technician report</th>
+              <th>Status</th>
+            </tr>
+            <tr>
+              <td> Device 1</td>
+              <td>Almost done...</td>
+              <td> Still in the shop</td>
+            </tr>
+            <tr>
+              <td>Device 2</td>
+              <td>It's bad chief.</td>
+              <td>You'll be here a while...</td>
+            </tr>
+            <tr>
+              <td>Device 3 </td>
+              <td>Done :)</td>
+              <td> Ready for collection</td>
+            </tr>
+           </table>
+          <br>
+           <button onClick="window.location.reload();">Refresh Table</button>
+        </div>  
+  </div>
+
+ 
+</body>
+
+  <div class = "foot" style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:5px; ">
+    <pre><p><small>  COPYRIGHT   ©   2022   PCREPAIRS</small></p></pre>
+  </div>
+   
+
+</html>
