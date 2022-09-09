@@ -20,5 +20,5 @@ module.exports = {
             },
         ],
     },
-    devServer: { static: "./dist/", hot: true },
+    devServer: { static: "./src/", hot: true },
 };

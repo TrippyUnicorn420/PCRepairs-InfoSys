@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BOOK YOUR DEVICES</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+       * {
+  box-sizing: border-box;
+}
+.header {
+  background-color: #000d34;
+  text-align: right;
+  color:white;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  border-radius: 30px;   
+}
+.foot{
+  text-align: center;
+  background-color: lightgrey;
+  float: middle;
+  padding: 10px;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 0;
+  width : 100%;
+  margin-left: 0%;
+}
+.nav {
+  overflow: hidden;
+  background-color: lightgrey;
+  font-family: Arial, sans-serif;
+  border-radius: 30px;   
+}
+.nav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.nav a:hover {
+  background-color: lightblue;
+  color: white;
+}
+.icons{
+  float: right;
+}
+ div.a {
+  text-align: center;
+  font-family: Arial, Helvetica sans-serif;
+  width : 100%;
+  margin-left: 0%;
+}
+div.b {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.main{
+  position: fixed;
+  top: 20%;
+  bottom:20%;
+  width: 100%;
+  margin-left:0%;
+}
+#note{
+    vertical-align: top;
+    font-size: 1.5em;
+    height: 5em;
+    width : 80%;
+    margin-left: 0%; 
+}
+#ptype, #numdev{
+    font-size: 1.5em;
+    height: 50px;
+    width : 80%;
+    margin-left: 0%;
+}
+@media screen and (max-width: 400px) {
+  .nav a, .main, .foot {
+    font-size: 2em;
+    float: none;
+    width: 100%;
+  }
+}
+@media screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .foot {
+    width : 95%;
+    margin-left: 0%;
+  }
+}
+
+
+
+
+  </style>
+</head> <div class="header"> 
+    <header>
+     <h3>PC repairs</h3>
+    </header></div>
+   <div class= "nav"> <nav><a href="url">Home</a>  <a href="url">Services</a> <a href="url"> About us</a> <a href="url">FAQs</a>  
+   <div class="icons">
+    <a href="#"> <i class="fa fa-fw fa-envelope"> </i></a> 
+    <a href="#"><i class='fa fa-phone'></i></a>
+    <a href ="#"><i class='fa fa-user-o'></i></a>
+    <a href="#"><i class='fa fa-search'></i></a>
+    
+
+    
+  </div></nav></div>
+    <body>
+    
+  <div class = "main">
+          <br><div class ="a"><p><h1>BOOK YOUR DEVICE</h1></p></div>
+          <div class = "b">
+           <form width>
+            <label for = "ref"><h3>NUMBER OF DEVICES</h3></label><br>
+           <input type = "number" name = "numdev" id = "numdev" ><br><br>
+           <label for = "ref"><h3>PROBLEM TYPE</h3></label><br>
+           <select name="ptype" id="ptype">
+            <option value="hardware"selected>Hardware</option>
+            <option value="software">Software</option>
+            <option value="systems">Systems</option>
+          </select><br><br>
+           <label for = "ref"><h3>NOTES</h3></label><br>
+           <input type = text name = "note" id="note" ><br><br>
+           <input type = "submit" value = "BOOK MY DEVICE">
+           </form><br>
+        </div>  
+  </div>
+    </body>
+    <div class = "foot">
+      <pre> <p><small>COPYRIGHT   ©   2022   PCREPAIRS</small></p></pre>
+    </div>
+
+
+</html>
