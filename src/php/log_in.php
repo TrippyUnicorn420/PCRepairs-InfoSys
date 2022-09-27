@@ -6,12 +6,11 @@ $log_this_person_in = mysqli_prepare($database, "SELECT * FROM logindetails WHER
 $hashed_password = hash("sha256", $_REQUEST['password']);
 $log_this_person_in->bind_param("ss", $_REQUEST['email'], $hashed_password);
 // $log_this_person_in->bind_param("ss", $_REQUEST['email'], $_REQUEST['password']);
-echo var_dump($hashed_password);
 
 $log_this_person_in->execute();
 
 $results = mysqli_fetch_array($log_this_person_in->get_result());
-echo var_dump($results);
+echo var_dump($_REQUEST);
 if (isset($results)) {
     session_start();
     // if an administrator is logging in
