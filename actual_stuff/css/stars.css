@@ -1,0 +1,26 @@
+canvas {
+    background: #f1f5f9;
+}
+
+#container {
+    position: relative;
+}
+
+#container canvas,
+#overlay {
+    position: absolute;
+    width: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+    canvas {
+        background-image: linear-gradient(
+            to right,
+            #09405c,
+            #0c5a82,
+            #1489c2,
+            #0c5a82,
+            #09405c
+        );
+    }
+}
