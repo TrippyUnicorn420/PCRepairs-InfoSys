@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <article
+            id="login_form"
+            class="m-auto h-auto rounded-xl object-cover text-slate-800 shadow-md ease-in-out hover:shadow-2xl hover:underline my-5 p-10"
+        >
+            <form action="php/log_in.php" method="post">
+                <input
+                    type="username"
+                    name="email"
+                    id="f_username"
+                    placeholder="Username..."
+                    class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:border-blue-600 focus:outline-none"
+                /><br />
+                <input
+                    type="password"
+                    name="password"
+                    id="f_password"
+                    placeholder="Password..."
+                    class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:border-blue-600 focus:outline-none"
+                /><br />
+                <input
+                    type="submit"
+                    value="Log In"
+                    class="w-full px-6 py-2.5 bg-nhblue text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue active-shadow-lg transition duration-150 ease-in-out"
+                />
+            </form>
+            <br />
+            <button onclick="return jikeleza();">
+                Don't have an account? Create one.
+            </button>
+        </article>
+
+        <article
+            id="create_form"
+            class="m-auto h-auto hidden rounded-xl object-cover text-white shadow-md ease-in-out hover:shadow-2xl hover:underline my-5"
+        >
+            <form action="login.php?create=yes" method="post">
+                <input
+                    type="text"
+                    name="name"
+                    id="f_name"
+                    placeholder="First Name"
+                />
+                <input
+                    type="text"
+                    name="last_name"
+                    id="f_lname"
+                    placeholder="Last Name"
+                /><br />
+                <input
+                    type="text"
+                    name="username"
+                    id="f_username2"
+                    placeholder="Username"
+                /><br />
+                <input
+                    type="email"
+                    name="email"
+                    id="f_email"
+                    placeholder="Email address"
+                /><br />
+                <input
+                    type="password"
+                    name="password"
+                    id="f_password2"
+                    placeholder="Password"
+                /><br />
+                <input
+                    type="submit"
+                    value="Sign Up"
+                    onclick="return checkExists();"
+                />
+            </form>
+            <br />
+            <button
+                onclick="document.getElementById('login_form').style.display='none' ; document.getElementById('create_form').style.display='block' ;"
+            >
+                Don't have an account? Create one.
+            </button>
+        </article>
+        <script src="bundle.js"></script>
+    </body>
+</html>

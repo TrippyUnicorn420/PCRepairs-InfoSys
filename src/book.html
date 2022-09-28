@@ -1,146 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BOOK YOUR DEVICES</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-       * {
-  box-sizing: border-box;
-}
-.header {
-  background-color: #000d34;
-  text-align: right;
-  color:white;
-  padding: 40px;
-  font-family: Arial, sans-serif;
-  border-radius: 30px;   
-}
-.foot{
-  text-align: center;
-  background-color: lightgrey;
-  float: middle;
-  padding: 10px;
-  margin-top: 20px;
-  position: absolute;
-  bottom: 0;
-  width : 100%;
-  margin-left: 0%;
-}
-.nav {
-  overflow: hidden;
-  background-color: lightgrey;
-  font-family: Arial, sans-serif;
-  border-radius: 30px;   
-}
-.nav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-.nav a:hover {
-  background-color: lightblue;
-  color: white;
-}
-.icons{
-  float: right;
-}
- div.a {
-  text-align: center;
-  font-family: Arial, Helvetica sans-serif;
-  width : 100%;
-  margin-left: 0%;
-}
-div.b {
-  text-align: center;
-  font-family: Arial, sans-serif;
-}
-.main{
-  position: fixed;
-  top: 20%;
-  bottom:20%;
-  width: 100%;
-  margin-left:0%;
-}
-#note{
-    vertical-align: top;
-    font-size: 1.5em;
-    height: 5em;
-    width : 80%;
-    margin-left: 0%; 
-}
-#ptype, #numdev{
-    font-size: 1.5em;
-    height: 50px;
-    width : 80%;
-    margin-left: 0%;
-}
-@media screen and (max-width: 400px) {
-  .nav a, .main, .foot {
-    font-size: 2em;
-    float: none;
-    width: 100%;
-  }
-}
-@media screen and (max-width:800px) {
-  /* For tablets: */
-  .main {
-    width: 80%;
-    padding: 0;
-  }
-  .foot {
-    width : 95%;
-    margin-left: 0%;
-  }
-}
-
-
-
-
-  </style>
-</head> <div class="header"> 
-    <header>
-     <h3>PC repairs</h3>
-    </header></div>
-   <div class= "nav"> <nav><a href="url">Home</a>  <a href="url">Services</a> <a href="url"> About us</a> <a href="url">FAQs</a>  
-   <div class="icons">
-    <a href="#"> <i class="fa fa-fw fa-envelope"> </i></a> 
-    <a href="#"><i class='fa fa-phone'></i></a>
-    <a href ="#"><i class='fa fa-user-o'></i></a>
-    <a href="#"><i class='fa fa-search'></i></a>
-    
-
-    
-  </div></nav></div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/fa18a9841f.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="css/stars.css" />
+        <script src="js/look_at_all_these_functions.js"></script>
+        <title>Book Your Device | PCRepairs</title>
+    </head>
     <body>
-    
-  <div class = "main">
-          <br><div class ="a"><p><h1>BOOK YOUR DEVICE</h1></p></div>
-          <div class = "b">
-           <form width>
-            <label for = "ref"><h3>NUMBER OF DEVICES</h3></label><br>
-           <input type = "number" name = "numdev" id = "numdev" ><br><br>
-           <label for = "ref"><h3>PROBLEM TYPE</h3></label><br>
-           <select name="ptype" id="ptype">
-            <option value="hardware"selected>Hardware</option>
-            <option value="software">Software</option>
-            <option value="systems">Systems</option>
-          </select><br><br>
-           <label for = "ref"><h3>NOTES</h3></label><br>
-           <input type = text name = "note" id="note" ><br><br>
-           <input type = "submit" value = "BOOK MY DEVICE">
-           </form><br>
-        </div>  
-  </div>
+        <div id="container">
+            <canvas id="canvas"></canvas>
+            <script src="js/stars.js"></script>
+            <div id="overlay">
+                <header class="bg-white">
+                    <a href="/"
+                        ><img
+                            class="float-left w-32 h-32"
+                            src="images/pcrepairs.jpeg"
+                    /></a>
+                    <br /><br /><br /><br /><br /><br />
+                    <nav class="drop-shadow-xl sticky">
+                        <div class="bg-white flex float-left space-x-4 w-1/2">
+                            <a
+                                class="px-3 py-2 text-white rounded-lg hover:bg-slate-300 hover:text-slate-900 shadow-md bg-nhblue animate-pulse"
+                                href="/"
+                                >Home</a
+                            >
+                            <a
+                                class="px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-300 hover:text-slate-900 hover:shadow-md"
+                                href="services.html"
+                                >Services</a
+                            >
+                            <a
+                                class="px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-300 hover:text-slate-900 hover:shadow-md"
+                                href="about_us.html"
+                                >About Us</a
+                            >
+                            <a
+                                class="px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-300 hover:text-slate-900 hover:shadow-md"
+                                href="faq.html"
+                                >FAQ</a
+                            >
+                        </div>
+                        <div
+                            class="bg-white flex justify-end float-right space-x-4 w-1/2"
+                        >
+                            <i
+                                class="px-3 py-3 rounded-lg hover:bg-slate-300 hover:shadow-md fa-solid fa-phone"
+                            ></i>
+                            <i
+                                class="px-3 py-3 rounded-lg hover:bg-slate-300 hover:shadow-md fa-solid fa-envelope"
+                            ></i>
+                            <i
+                                class="px-3 py-3 rounded-lg hover:bg-slate-300 hover:shadow-md fa-solid fa-user"
+                            ></i>
+                            <i
+                                class="px-3 py-3 rounded-lg hover:bg-slate-300 hover:shadow-md fa-solid fa-magnifying-glass"
+                            ></i>
+                        </div>
+                    </nav>
+                </header>
+
+                <section class="my-16">
+                    <article
+                        class="bg-white m-auto p-4 w-1/2 h-auto bg-cover bg-center rounded-xl object-cover shadow-md ease-in-out hover:shadow-2xl"
+                    >
+                        <h1 class="text-4xl mx-5 font-bold">
+                            What kind of device do you need to book?
+                        </h1>
+                    </article>
+                </section>
+
+                <div
+                    class="m-auto w-3/5 grid grid-cols-2 gap-5 place-content-center"
+                >
+                    <a href="#" onclick="return laptopClicked();">
+                        <article
+                            class="bg-white m-auto h-auto bg-cover bg-center rounded-xl object-cover shadow-md ease-in-out hover:shadow-2xl my-5"
+                        >
+                            <div class="py-5" id="laptop_choice">
+                                <img
+                                    class="object-scale-down w-1/2 h-1/2 m-auto"
+                                    src="images/laptop.png"
+                                    alt="Laptop"
+                                />
+                                <p class="mx-5">Laptop</p>
+                            </div>
+                        </article></a
+                    >
+
+                    <a href="#">
+                        <article
+                            class="bg-white m-auto h-auto bg-cover bg-center rounded-xl object-cover shadow-md ease-in-out hover:shadow-2x my-5"
+                        >
+                            <div class="py-5" id="phone_choice">
+                                <img
+                                    class="object-scale-down w-1/2 h-1/2 m-auto"
+                                    src="images/phone.png"
+                                    alt="Phone"
+                                />
+                                <p class="mx-5">Phone</p>
+                            </div>
+
+                            <form action="php/book_a_device.php" method="post">
+                                <div class="hidden" id="laptop_details">
+                                    <label for="l_manufacturer"
+                                        >Who made the laptop?</label
+                                    ><br />
+                                    <select
+                                        name="manufacturer"
+                                        id="l_manufacturer"
+                                        class="block w-1/2 px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:border-blue-600 focus:outline-none"
+                                    >
+                                        <option
+                                            disabled
+                                            selected
+                                            value
+                                        ></option>
+                                        <option value="Apple">Apple</option>
+                                        <option value="Dell">Dell</option>
+                                        <option value="HP">HP</option>
+                                        <option value="Acer">
+                                            Acer
+                                        </option></select
+                                    ><br />
+                                    <label for="model">What model is it?</label
+                                    ><br />
+                                    <select
+                                        name="model"
+                                        id="l_model"
+                                        disabled
+                                        class="block w-1/2 px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:border-blue-600 focus:outline-none"
+                                    ></select
+                                    ><br />
+                                    <button
+                                        type="button"
+                                        onclick="keep_laptop_movin(); return false;"
+                                        class="w-full px-6 py-2.5 bg-nhblue text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue active-shadow-lg transition duration-150 ease-in-out"
+                                    >
+                                        Next...
+                                    </button>
+                                </div>
+                                <div class="hidden" id="laptop_problem">
+                                    <label for="issue" id="issue_l"></label
+                                    ><br />
+                                    <input
+                                        type="text"
+                                        name="issue"
+                                        id="l_issue"
+                                        class="block w-1/2 px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:border-blue-600 focus:outline-none"
+                                    /><br />
+                                    <button
+                                        type="button"
+                                        onclick="finish_laptop_up(); return false;"
+                                        class="w-full px-6 py-2.5 bg-nhblue text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue active-shadow-lg transition duration-150 ease-in-out"
+                                    >
+                                        Next...
+                                    </button>
+                                </div>
+                                <div class="hidden" id="final_laptop">
+                                    <h1
+                                        class="text-4xl mx-5 font-bold"
+                                        id="final_laptop_assessment"
+                                    ></h1>
+                                    <br />
+                                    <p
+                                        class="mx-5 italic"
+                                        id="reported_laptop_issue"
+                                    ></p>
+                                    <br />
+                                    <p
+                                        class="mx-5 my-3 text-xl"
+                                        id="l_price"
+                                    ></p>
+                                    <br />
+                                    <p class="mx-5 my-3">
+                                        Bring your device and pay in store.
+                                    </p>
+                                    <br />
+                                    <input
+                                        type="submit"
+                                        value="Create booking"
+                                        class="w-full px-6 py-2.5 bg-nhblue text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue active-shadow-lg transition duration-150 ease-in-out"
+                                    />
+                                </div>
+                            </form></article
+                    ></a>
+                </div>
+
+                <footer class="fixed bottom-0 bg-white w-full drop-shadow-2xl">
+                    <div class="m-auto">
+                        <small class="justify-center"
+                            >Need help?
+                            <a href="contact.html">Contact us.</a></small
+                        ><br />
+                        <small class="justify-center"
+                            >Copyright &copy; 2022 Nerd Herd. All Rights
+                            Reserved.</small
+                        >
+                    </div>
+                </footer>
+                <script src="bundle.js"></script>
+                <script src="js/populate_booking_tables.js"></script>
+            </div>
+        </div>
     </body>
-    <div class = "foot">
-      <pre> <p><small>COPYRIGHT   ©   2022   PCREPAIRS</small></p></pre>
-    </div>
-
-
 </html>
