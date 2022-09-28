@@ -16,6 +16,10 @@ module.exports = {
                 "shattered-mac": "url('/src/images/shattered_mac.png')",
                 "macnifying-glass": "url('/src/images/magnifier.png')",
                 squaw: "url('/src/images/the-squaw.png')",
+                sabelwe: "url('/src/images/Sabelwe.jpeg')",
+                Vin: "url('/src/images/Vin.jpeg')",
+                Ubuhle: "url('/src/images/Ubuhle.jpeg')",
+                Cathy: "url('/src/images/Cathy.jpeg')",
             },
         },
         colors: ({ colors }) => ({
