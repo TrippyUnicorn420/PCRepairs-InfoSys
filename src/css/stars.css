@@ -1,5 +1,17 @@
 canvas {
-    background: #f1f5f9;
+    background-image: linear-gradient(
+        to right,
+        #09405c,
+        #0c5a82,
+        #1489c2,
+        #0c5a82,
+        #09405c
+    );
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -9999;
 }
 
 #container {
@@ -8,19 +20,5 @@ canvas {
 
 #container canvas,
 #overlay {
-    position: absolute;
     width: 100%;
-}
-
-@media (prefers-color-scheme: dark) {
-    canvas {
-        background-image: linear-gradient(
-            to right,
-            #09405c,
-            #0c5a82,
-            #1489c2,
-            #0c5a82,
-            #09405c
-        );
-    }
 }
