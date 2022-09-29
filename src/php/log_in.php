@@ -20,10 +20,10 @@ if (isset($results)) {
         $_SESSION["customer_id"] = "admin";
         header("Location: ../admin.php");
     } else {
-        $customer_id = mysqli_fetch_row(mysqli_query($database, "SELECT Customer_ID FROM Customer WHERE Username = " . $_REQUEST['username'] . ";"))[0];
+        $customer_id = mysqli_fetch_row(mysqli_query($database, "SELECT Customer_ID FROM Customer WHERE Username = '{$_REQUEST['email']}';"))[0];
         setcookie("name", $customer_id, time() + (10 * 365 * 24 * 60 * 60));
-        $_SESSION["customer_id"] = $customer_id[0];
-        $_SESSION["customer_name"] = mysqli_fetch_row(mysqli_query($database, "SELECT Customer_FName FROM Customer WHERE Username = " . $_REQUEST['username'] . ";"))[0];
+        $_SESSION["customer_id"] = $customer_id;
+        $_SESSION["customer_name"] = mysqli_fetch_row(mysqli_query($database, "SELECT Customer_FName FROM Customer WHERE Username = '{$_REQUEST['email']}';"))[0];
         $_SESSION["start"] = time();
         header("Location: ../welcome.php");
     }
