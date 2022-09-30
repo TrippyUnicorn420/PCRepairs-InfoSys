@@ -1,0 +1,74 @@
+USE nerdherd;
+
+CREATE TABLE Customer (
+	Customer_ID INTEGER NOT NULL PRIMARY KEY auto_increment,
+    Customer_FName VARCHAR(255),
+    Customer_LName VARCHAR(255),
+    Customer_Email VARCHAR(255)
+);
+
+CREATE TABLE Devices (
+	Device_ID INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    Manufacturer VARCHAR(255),
+    Model VARCHAR(255),
+    Issue VARCHAR(1024),
+    Customer_ID INTEGER,
+    FOREIGN KEY(Customer_ID) REFERENCES Customer(Customer_ID) ON UPDATE CASCADE
+);
+    
+CREATE TABLE Engineers (
+	Engineer_ID INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    Engineer_Name VARCHAR(255),
+    Engineer_Speciality VARCHAR(1023)
+);
+
+CREATE TABLE LoginDetails (
+	Username VARCHAR(255) NOT NULL PRIMARY KEY,
+    Password VARCHAR(255) NOT NULL,
+    Admin BOOLEAN NOT NULL DEFAULT false
+);
+
+CREATE TABLE Inventory (
+	Part_ID VARCHAR(255) NOT NULL PRIMARY KEY,
+    Part_Description VARCHAR(1000),
+    Part_Supplier VARCHAR(255),
+    Part_Price DECIMAL(10,2)
+);
+
+CREATE TABLE Job (
+	Job_ID INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    Device_ID INTEGER NOT NULL,
+    Engineer_ID INTEGER NOT NULL,
+    Part_ID VARCHAR(255) NOT NULL,
+    FOREIGN KEY(Device_ID) REFERENCES Devices(Device_ID) ON UPDATE CASCADE,
+    FOREIGN KEY(Engineer_ID) REFERENCES Engineers(Engineer_ID) ON UPDATE CASCADE,
+	FOREIGN KEY(Part_ID) REFERENCES Inventory(Part_ID) ON UPDATE CASCADE
+);
+
+CREATE TABLE Repair_Job (
+	Ref_Num INTEGER NOT NULL PRIMARY KEY,
+	Job_ID INTEGER NOT NULL,
+    FOREIGN KEY (Job_ID) REFERENCES Job(Job_ID)
+);
+
+//composite table for the parts to job
+CREATE TABLE PartForJob (
+	Job_ID INTEGER,
+	Part_ID VARCHAR (255),
+	FOREIGN KEY(Job_ID) REFERENCES job(Job_ID) ON UPDATE CASCADE,
+	FOREIGN KEY(Part_ID) REFERENCES inventory(Part_ID) ON UPDATE CASCADE
+);
+
+//to remove the job id from the inventory table
+alter table nerdherd.inventory
+drop constraint inventory_ibfk_1;
+
+alter table nerdherd.inventory
+drop constraint inventory_ibfk_2;
+
+alter table nerdherd.inventory
+drop column Job_ID;
+
+//insert into inventory table
+insert into inventory(Part_ID, Part_Description, Part_Supplier, Part_Price, Engineer_ID)
+values (2, "Hikvision 8GB 3200MHz DDR4 Desktop Memory / HKED4081CAB2F1ZB1", "Evetech", 800.00, 1);
