@@ -28,15 +28,11 @@ for (var i = 0; i < x; i++) {
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    if (isDark) ctx.globalCompositeOperation = "lighter";
-    else ctx.globalCompositeOperation = "darker";
+    ctx.globalCompositeOperation = "lighter";
 
     for (var i = 0, x = stars.length; i < x; i++) {
         var s = stars[i];
-
-        if (isDark) ctx.fillStyle = "#0280b2";
-        else ctx.fillStyle = "#fff";
+        ctx.fillStyle = "#fff";
         ctx.beginPath();
         ctx.arc(s.x, s.y, s.radius, 0, 2 * Math.PI);
         ctx.fill();
@@ -60,13 +56,6 @@ function draw() {
     ctx.lineWidth = 0.05;
     ctx.strokeStyle = "white";
     ctx.stroke();
-}
-
-function isDark() {
-    return (
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-    );
 }
 
 function distance(point1, point2) {

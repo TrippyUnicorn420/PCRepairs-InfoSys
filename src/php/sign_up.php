@@ -22,7 +22,7 @@ $cookie_value = $customer_id;
 /* I want people to stay logged in until they click logout. This cookie will expire 10 years after its creation. */
 setcookie($cookie_name, $cookie_value, time() + (10 * 365 * 24 * 60 * 60));
 session_start();
-$_SESSION["name"] = $_REQUEST['name'];
+$_SESSION["customer_name"] = $_REQUEST['name'];
 $_SESSION["customer_id"] = $customer_id;
 $_SESSION["start"] = time();
 
